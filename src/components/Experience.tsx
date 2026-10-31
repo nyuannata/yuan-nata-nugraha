@@ -45,7 +45,7 @@ const otherExperiences = [
   {
     role: "Laboratory Intern",
     company: "Universitas Sriwijaya",
-    date: "Sep 2019 – Oct 2019",
+    date: "Sep 2019 - Oct 2019",
     location: "Palembang, Indonesia",
     description: [
       "Operated and monitored 3D printing processes for prototype development.",
@@ -54,7 +54,7 @@ const otherExperiences = [
     ],
   },
   {
-    role: "Charity Livestream Committee — Moderator & Equipment",
+    role: "Charity Livestream Committee - Moderator & Equipment",
     company: "Streamer Channel GAGITUSIL",
     date: "Jun 2025",
     location: "Volunteer",
@@ -94,7 +94,7 @@ export function Experience() {
         </div>
       </motion.div>
 
-      {/* === PRIMARY: ACC — scroll-driven milestones === */}
+      {/* === PRIMARY: ACC - scroll-driven milestones === */}
       <div className="mb-20">
         <div className="mb-10">
           {/* ACC Header card */}
@@ -117,30 +117,32 @@ export function Experience() {
               </div>
             </div>
             <span className="text-xs font-mono text-gray-400 bg-white/5 border border-white/8 py-1.5 px-4 rounded-full shrink-0">
-              Mar 2026 – Present
+              Mar 2026 - Sep 2026
             </span>
           </motion.div>
 
           {/* ACC Milestones */}
           <div className="grid gap-4 md:grid-cols-2">
-            {accMilestones.map((m, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: false, amount: 0.15 }}
-                transition={{
-                  delay: (i % 2) * 0.08,
-                  duration: 0.55,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                whileHover={{ y: -4, scale: 1.015, transition: { duration: 0.2 } }}
-                className={`card-base p-5 ${i === 0 ? "md:col-span-2" : ""} transition-all duration-300 hover:border-white/20`}
-              >
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center shrink-0">
-                    <m.icon size={15} className="text-gray-400" />
-                  </div>
+            {accMilestones.map((m, i) => {
+              const MilestoneIcon = m.icon;
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: false, amount: 0.15 }}
+                  transition={{
+                    delay: (i % 2) * 0.08,
+                    duration: 0.55,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
+                  whileHover={{ y: -4, scale: 1.015, transition: { duration: 0.2 } }}
+                  className={`card-base p-5 ${i === 0 ? "md:col-span-2" : ""} transition-all duration-300 hover:border-white/20`}
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center shrink-0">
+                      <MilestoneIcon size={15} className="text-gray-400" />
+                    </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-3 mb-2">
                       <span className="text-[10px] font-mono text-[#E8262A] font-bold">{m.num}</span>
@@ -157,12 +159,13 @@ export function Experience() {
                   </div>
                 </div>
               </motion.div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
 
-      {/* === OTHER EXPERIENCES — timeline === */}
+      {/* === OTHER EXPERIENCES - timeline === */}
       <div className="border-l border-white/8 pl-6 md:pl-10 relative space-y-10">
         <div className="timeline-line" />
         {otherExperiences.map((exp, i) => (
@@ -189,7 +192,7 @@ export function Experience() {
                 <ul className="space-y-2 text-gray-400 text-sm">
                   {exp.description.map((desc, idx) => (
                     <li key={idx} className="flex gap-3">
-                      <span className="text-[#E8262A] mt-0.5 shrink-0">–</span>
+                      <span className="text-[#E8262A] mt-0.5 shrink-0">-</span>
                       <span>{desc}</span>
                     </li>
                   ))}

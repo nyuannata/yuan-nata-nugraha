@@ -12,7 +12,7 @@ Yuan Nata Nugraha adalah praktisi AI dan Machine Learning yang berfokus pada pem
 WORK EXPERIENCE:
 1. Astra Credit Companies (ACC) — Jakarta, Indonesia
    Role: AI Project Intern
-   Period: Maret 2026 – Sekarang (Present)
+   Period: Maret 2026 – Sep 2026
    Pencapaian & Proyek:
    - Automatic Speech Recognition: Membangun pipeline ASR menggunakan OpenAI Whisper Large-v3 pada infrastruktur GPU ~42 GB VRAM. Melakukan transkripsi manual dan anotasi ground-truth pada 125 rekaman audio untuk evaluasi akurasi transkripsi secara sistematis.
    - RAG Information Retrieval App: Mengembangkan aplikasi web Retrieval-Augmented Generation (RAG) menggunakan Google Gemini API untuk document-grounded question answering yang akurat dan berbasis konteks.

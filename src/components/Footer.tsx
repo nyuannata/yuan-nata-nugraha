@@ -10,13 +10,12 @@ export const Footer: React.FC = () => {
   });
 
   const addressY = useTransform(scrollYProgress, [0, 1], [30, 0]);
-  const mapX = useTransform(scrollYProgress, [0, 1], [40, 0]);
   const copyY = useTransform(scrollYProgress, [0, 1], [15, 0]);
 
   return (
     <footer ref={footerRef} className="border-t border-white/10 py-12 relative z-10 bg-black overflow-hidden">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 mb-8">
+        <div className="flex flex-col items-center justify-center mb-8">
 
           {/* Address */}
           <motion.div
@@ -25,41 +24,15 @@ export const Footer: React.FC = () => {
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: false, amount: 0.1 }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="flex-1 text-center md:text-left"
+            className="text-center"
           >
-            <h3 className="text-xl font-semibold text-white mb-4 flex items-center justify-center md:justify-start gap-2">
+            <h3 className="text-xl font-semibold text-white mb-2 flex items-center justify-center gap-2">
               <MapPin className="text-blue-500" size={20} />
               Alamat Domisili
             </h3>
-            <p className="text-gray-400 max-w-sm leading-relaxed mx-auto md:mx-0 text-sm md:text-base">
-              Jl. Kusuma Indah Blok A19 No. 32<br />
-              Jatibening, Pondok Gede<br />
+            <p className="text-gray-400 leading-relaxed text-sm md:text-base">
               Bekasi Selatan
             </p>
-          </motion.div>
-
-          {/* Map */}
-          <motion.div
-            style={{ x: mapX }}
-            initial={{ opacity: 0, y: 20, scale: 0.96 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: false, amount: 0.1 }}
-            transition={{ duration: 0.6, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
-            whileHover={{ y: -3, scale: 1.02, transition: { duration: 0.2 } }}
-            className="w-full md:w-auto flex justify-center"
-          >
-            <div className="h-32 w-full max-w-[250px] md:w-64 rounded-xl overflow-hidden border border-zinc-800 shadow-lg relative bg-zinc-900 transition-all hover:border-zinc-700">
-              <iframe
-                title="Google Maps Location"
-                src="https://www.google.com/maps?q=jl.kusuma+indah+blok.A19+no.32,+jatibening,+pondokgede,+bekasi+selatan&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0, filter: "invert(90%) hue-rotate(180deg) grayscale(20%)" }}
-                allowFullScreen={false}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
           </motion.div>
         </div>
 

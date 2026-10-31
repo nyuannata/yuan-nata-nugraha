@@ -147,7 +147,7 @@ const searchDatabase: SearchItem[] = [
     id: "e1",
     title: "Astra Credit Companies (ACC) — AI Project Intern",
     category: "Experience",
-    subtitle: "Maret 2026 – Sekarang (Whisper Large-v3, RAG Gemini, GPU 42GB)",
+    subtitle: "Maret 2026 – Sep 2026 (Whisper Large-v3, RAG Gemini, GPU 42GB)",
     targetId: "experience",
     keywords: ["experience", "pengalaman", "magang", "intern", "internship", "astra", "acc", "whisper", "rag", "project"],
   },
